@@ -29,3 +29,7 @@ Subnet (public) for Bastion Host - 10.0.31.0/24 with NAT
 8. Create Load Balancer for instances;
 9. Create Auto Scaling Group.
 
+## Description of infrastructure which was realized. 
+
+Оскільки безкоштовні ресурси закінчились, була реалізована така схема (з метою економії власних коштів).
+
