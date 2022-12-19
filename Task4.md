@@ -17,4 +17,8 @@ Database:
 
 As the resoult of workig LAMP is installed Wordpress v5.9
 
+<img src="https://user-images.githubusercontent.com/79985930/208496730-370b4a9f-5460-4c70-964e-7c5040fee759.png" width="500" height="150" >
 
+### 2. Create resources via Terraform
+
+The Terraform script is available by the link:
