@@ -19,7 +19,7 @@ resource "google_compute_instance" "web" { // create Instance with Apache + PHP
   }
 
   metadata_startup_script = file("apache2.sh")  // Shell script to install Mysql client, apache, php
-  // Available by the link https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/2944d4b8798fb9dc4afe7fe71b5e9386c1818d1c/apache2.sh
+  // Available by the link [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/2944d4b8798fb9dc4afe7fe71b5e9386c1818d1c/apache2.sh](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/2944d4b8798fb9dc4afe7fe71b5e9386c1818d1c/apache2.sh)
 
   scheduling {
     preemptible       = true
