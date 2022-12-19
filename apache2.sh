@@ -1,10 +1,12 @@
 #!/bin/bash
 
-sudo apt-get update 
-sudo apt-get install apache2 default-mysql-client libapache2-mod-php php php-pear php-mysql php-gd -y
-echo '<!doctype html><html><body><h1>Hello You Successfully was able to run a webserver on GCP with Terraform!</h1></body></html>' | sudo tee /var/www/html/index.html
-echo '<?php phpinfo (); ?>' | sudo tee /var/www/html/phpinfo.php
-sudo chown -R www-data:www-data /var/www
-sudo a2enmod rewrite
-sudo phpenmod mcrypt
-sudo systemctl restart apache2
+apt-get update 
+apt-get install apache2 default-mysql-client libapache2-mod-php php php-pear php-mysql php-gd -y
+apt-get install wget -y
+wget -P /var/www/html https://uk.wordpress.org/wordpress-5.6.9-uk.zip
+unzip -j wordp*
+rm wordpress-5.6.9-uk.zip
+chown -R www-data:www-data /var/www
+a2enmod rewrite
+phpenmod mcrypt
+systemctl restart apache2
