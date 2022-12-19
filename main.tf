@@ -19,6 +19,7 @@ resource "google_compute_instance" "web" { // create Instance with Apache + PHP
   }
 
   metadata_startup_script = file("apache2.sh")  // Shell script to install Mysql client, apache, php
+  // Available by the link https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/2944d4b8798fb9dc4afe7fe71b5e9386c1818d1c/apache2.sh
 
   scheduling {
     preemptible       = true
@@ -50,16 +51,17 @@ charset = "utf8"
 collation = "utf8_general_ci"
 }
 
-// Not good solution via security
-
+// Not good solution via security, but it is described in official documentation
+/*
 resource "google_sql_user" "users" {
 name = "root"
 instance = "${google_sql_database_instance.mysql-from-terraform.name}"
 host = "%"
 password = "mypassw0rd"
 }
+*/
+// Create user.DB via IAM
 
-/*
 resource "google_sql_user" "iam_user_for_for_db" {
   name     = "markvanholsteijn@binx.io"
   instance = google_sql_database_instance.mysql-from-terraform.name
