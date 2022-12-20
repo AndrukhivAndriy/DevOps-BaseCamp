@@ -31,10 +31,10 @@ To run this script:
 - run command in shell: **terraform apply**;
 - check created resources. 
 
-[### 3. Create resources via Gcloud
+### 3. Create resources via Gcloud
 
   
-](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/974df4ff2e16e76e3477f211960bd7e99b3254e1/gcloud.sh)
+Gcloud commands to create infrastructure are available by the link - [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/974df4ff2e16e76e3477f211960bd7e99b3254e1/gcloud.sh](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/974df4ff2e16e76e3477f211960bd7e99b3254e1/gcloud.sh)
 
 To run this script:
 - install Gcloud [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install);
