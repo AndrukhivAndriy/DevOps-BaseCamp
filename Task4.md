@@ -21,7 +21,7 @@ As the resoult of workig LAMP is installed Wordpress v5.9. It available by the l
 
 ### 2. Create resources via Terraform
 
-The Terraform script is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/ccf9695fccf6c2f05d5545ea1db3909149a1a38e/main.tf](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/ccf9695fccf6c2f05d5545ea1db3909149a1a38e/main.tf)
+The Terraform script is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/34b5aff0e9201cf573c79428b75af4bcd7307403/main.tf](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/34b5aff0e9201cf573c79428b75af4bcd7307403/main.tf)
 
 To run this script:
 
