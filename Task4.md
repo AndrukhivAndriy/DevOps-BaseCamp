@@ -23,31 +23,19 @@ As the resoult of workig LAMP is installed Wordpress v5.9. It available by the l
 
 The Terraform script is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/ccf9695fccf6c2f05d5545ea1db3909149a1a38e/main.tf](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/ccf9695fccf6c2f05d5545ea1db3909149a1a38e/main.tf)
 
-### 3. Create resources via Gcloud
+To run this script:
 
-/# gcloud config set project direct-builder-276316
-/# gcloud config set compute/region europe-west3
-/# gcloud config set compute/zone europe-west3-a
+- install Terraform [https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- Create some folder on your disk and copy terraform script to this folder;
+- run command in shell: **terraform plan** and check is everything is fine;
+- run command in shell: **terraform apply**;
+- check created resources. 
 
-/# gcloud compute instances create webserver \
-  --image-project=debian-cloud \
-  --image-family=debian-10 \
-  --tags="web", "http-server" \
-  --metadata-from-file=startup-script="D:\terraform\apache2.sh"
+[### 3. Create resources via Gcloud
+
   
-/# gcloud sql instances create my-database-instance \
-  --database-version=MYSQL_8_0 \
-  --tier=db-f1-micro \
-  --region=europe-west3 \
-  --authorized-networks='0.0.0.0/0'\
-  --storage-size=10GB \
-  --storage-type=SSD \
-  --storage-auto-increase\
-  --root-password='passw0rd'
-  --database-flags=cloudsql_iam_authentication=on
-  
-  /# gcloud sql databases create mydatabase \
-  --instance=my-database-instance \
-  --charset=utf-8
-  --collation=utf8_general_ci
-  
+](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/974df4ff2e16e76e3477f211960bd7e99b3254e1/gcloud.sh)
+
+To run this script:
+- install Gcloud [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install);
+- run commands from script one by one in shell or issue this script as shell script 
