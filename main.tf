@@ -44,7 +44,7 @@ tier = "db-f1-micro"
 authorized_networks {
         value           = "0.0.0.0/0" // Not good for via security. Instance and DB-instance have to be in one subnet or different but with trafic route.  
         name            = "all"
-        expiration_time = "2022-12-15T16:19:00.094Z"
+        expiration_time = "2022-12-21T16:19:00.094Z"
       }
 }
 deletion_protection = "false"
