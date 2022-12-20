@@ -41,6 +41,11 @@ database_version = "MYSQL_8_0"
 region = "europe-west3"
 settings {
 tier = "db-f1-micro"
+authorized_networks {
+        value           = "0.0.0.0/0" // Not good for via security. Instance and DB-instance have to be in one subnet or different but with trafic route.  
+        name            = "all"
+        expiration_time = "2022-12-15T16:19:00.094Z"
+      }
 }
 deletion_protection = "false"
 }
@@ -51,19 +56,19 @@ charset = "utf8"
 collation = "utf8_general_ci"
 }
 
-// Not good solution via security, but it is described in official documentation
+// Not good solution via security, but this way is described in official documentation
 /*
 resource "google_sql_user" "users" {
 name = "root"
 instance = "${google_sql_database_instance.mysql-from-terraform.name}"
 host = "%"
-password = "mypassw0rd"
+password = "MYpassw0rd"
 }
 */
 // Create user.DB via IAM
 
 resource "google_sql_user" "iam_user_for_for_db" {
-  name     = "markvanholsteijn@binx.io"
+  name     = "mysqluser111112222@gmail.com"
   instance = google_sql_database_instance.mysql-from-terraform.name
   type     = "CLOUD_IAM_USER"
 }
@@ -77,4 +82,4 @@ resource "google_project_iam_member" "iam_user_cloudsql_client" {
   role   = "roles/cloudsql.client"
   member = format("user:%s", google_sql_user.iam_user_for_for_db.name)
 }
-*/
+
