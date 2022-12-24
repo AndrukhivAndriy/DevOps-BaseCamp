@@ -60,3 +60,8 @@ ansible all -m setup
 
 - debug:
     var: ansible_distribution
+    
+    VAULT:
+    
+    1. ansible-playbook playbook3.yml --vault-password-file ./pass   ---- to run playbook
+    2. ansible-vault encrypt_string --vault-password-file pass --name ansible_password
