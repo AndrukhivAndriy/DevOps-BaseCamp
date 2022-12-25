@@ -1,0 +1,13 @@
+---
+# tasks file for create_empty_file
+  
+- name: Ping servers
+  ping:
+
+- name: Create file
+  file:
+      path: "{{ destin_file }}"
+      state: touch
+      mode: 0500
+      owner: ec2-user
+      group: ec2-user
