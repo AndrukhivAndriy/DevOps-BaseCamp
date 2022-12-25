@@ -4,3 +4,9 @@
   hosts: all
   roles:
     - fetch_distro_name
+    
+- name: Create empty file
+  become: true
+  hosts: iaac
+  roles:
+    - create_empty_file
