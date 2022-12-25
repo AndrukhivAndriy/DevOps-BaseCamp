@@ -29,11 +29,11 @@ In this case we will print all data on web page via using Jinja Template. So, th
 
 The Role is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/fetch_distro_name](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/fetch_distro_name)
 
-**Optional: use ansible_user and ansible_password for ssh connection and store passwords via Vault**
+## Optional: use ansible_user and ansible_password for ssh connection and store passwords via Vault
    
-1. Encrypt user password. The password is in file ./pass. We will use Ad-Hoc:
+Encrypt user password. The password is in file ./pass. We will use Ad-Hoc:
 
-ansible-vault encrypt_string --vault-password-file pass --name ansible_password
+**ansible-vault encrypt_string --vault-password-file pass --name ansible_password**
 
 The Playbook wich realise taks is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/playbook3.yml](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/playbook3.yml)
 
