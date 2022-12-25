@@ -29,6 +29,8 @@ In this case we will print all data on web page via using Jinja Template. So, th
 
 The Role is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/fetch_distro_name](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/fetch_distro_name)
 
+To run scripts - go to the folder Ansible in shell and run **ansible-playbook main.yml**
+
 ## Optional: use ansible_user and ansible_password for ssh connection and store passwords via Vault
    
 Encrypt user password. The password is in file ./pass. We will use Ad-Hoc:
