@@ -9,11 +9,11 @@ By the link [https://github.com/yurnov/IaC_Ansible_basecamp/blob/9ed49abab70f135
 
 2. **Create a inventory** file with four groups, each provisioning VM should be in separate group and group named iaas what should include childrens from two first groups.
 
-Is available by the link: 
+Is available by the link (in INI format): [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/hosts.ini](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/hosts.ini)
 
 3. **Create Role: creating a empty file /etc/iaac with rigths 0500**
 
-Is available by the link:
+Is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/create_empty_file](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/create_empty_file)
 
 4. **Create Role: fetch a linux distro name/version.**
 
@@ -27,16 +27,20 @@ In this case we will print all data on web page via using Jinja Template. So, th
   </tr>
 </table>
 
+The Role is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/fetch_distro_name](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible/roles/fetch_distro_name)
+
 **Optional: use ansible_user and ansible_password for ssh connection and store passwords via Vault**
    
 1. Encrypt user password. The password is in file ./pass. We will use Ad-Hoc:
 
 ansible-vault encrypt_string --vault-password-file pass --name ansible_password
 
-The Playbook wich realise taks is available by the link.
+The Playbook wich realise taks is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/playbook3.yml](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/playbook3.yml)
 
-The password is "hello" and file with password is available by the link
+The password is "hello" and file with password is available by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/pass](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/18a64d678d1a19f233e223ea34098f2055197f0b/ansible/pass)
 
 To run Playbook use : **ansible-playbook playbook3.yml --vault-password-file ./pass**
   
-   
+**P.S.**
+
+THE HOLE SCRIPTS ARE - [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/ansible)
