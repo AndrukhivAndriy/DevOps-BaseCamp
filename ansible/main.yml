@@ -1,0 +1,6 @@
+---
+- name: Create empty file
+  become: true
+  hosts: all
+  roles:
+    - fetch_distro_name

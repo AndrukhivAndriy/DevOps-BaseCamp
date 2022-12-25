@@ -1,0 +1,4 @@
+---
+# handlers file for fetch_distro_name
+- name: Restart Apache
+  service: name=httpd state=restarted

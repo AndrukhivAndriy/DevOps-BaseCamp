@@ -1,0 +1,20 @@
+---
+# tasks file for vault_user_ssh
+- name: Create User
+     ansible.builtin.user:
+       name: "{{ username }}"
+       state: present
+       shell: /bin/bash
+       password: "{{ userpass | string | password_hash('sha512') }}"
+       groups: wheel
+       update_password: on_create
+       append: yes
+       
+   - name: allow SSH password authentication
+     lineinfile:
+       dest=/etc/ssh/sshd_config
+       regexp="^PasswordAuthentication"
+       line="PasswordAuthentication yes"
+       state=present
+     notify:
+       - restart sshd

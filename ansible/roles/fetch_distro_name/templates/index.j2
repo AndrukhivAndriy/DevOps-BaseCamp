@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+<h2> Devops Camp GL </h2>
+<br>
+<h3>Info about AWS Instance:</h3>
+External IP : <a href=http://{{ ipify_public_ip }} > {{ ipify_public_ip }} </a><br>
+Internal hostname : {{ ansible_fqdn }} <br>
+Host family of instance : {{ ansible_os_family  }} <br>
+Distribution :  {{ ansible_distribution }} <br>
+Distribution major version is :  {{ ansible_distribution_major_version }} <br>
+The owner(variable, not taken from #ansible all -m setup) :   {{ owner }} <br>
+Internal IP of this instance :  {{ ansible_default_ipv4.address }}
+</body></html>

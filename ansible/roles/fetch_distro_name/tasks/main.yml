@@ -1,0 +1,22 @@
+---
+# tasks file for fetch_distro_name
+
+- name: Get external IP
+  ipify_facts:
+
+- debug: var=ipify_public_ip
+- debug: var=ansible_hostname
+- debug: var=ansible_os_family
+
+- name: Install Apache
+  yum: name=httpd state=latest
+
+- name: Copy web page to server. Generate Index.html
+  template: src=index.j2 dest={{ destin_file }}/index.html mode=0555
+  notify: Restart Apache
+
+- name: Start web server and enable on boot
+  service: 
+   name=httpd 
+   state=started 
+   enabled=yes
