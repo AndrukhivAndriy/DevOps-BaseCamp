@@ -55,7 +55,7 @@ resource "aws_launch_configuration" "Grafanalc" {
   security_groups = [aws_security_group.grafana_server.id]
   associate_public_ip_address = true
   user_data = file("userdata/awsuserdata.sh")
-#  key_name = file("userdata/onekey.pub")
+  key_name = file("userdata/onekey.pub")
 
   lifecycle {
     create_before_destroy = true
