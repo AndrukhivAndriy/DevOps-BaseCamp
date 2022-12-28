@@ -43,7 +43,9 @@ And the screenshots from browser are there:
 
 So, the links:
 
-    Hello from AWS : [Grafana-elb-292409992.eu-central-1.elb.amazonaws.com](http://Grafana-elb-292409992.eu-central-1.elb.amazonaws.com)
+
+Hello from AWS : <a href="http://Grafana-elb-292409992.eu-central-1.elb.amazonaws.com" target="_blank">Grafana-elb-292409992.eu-central-1.elb.amazonaws.com</a>
     
-    Hello from Azure : [20.101.100.25](http://20.101.100.25/)
+Hello from Azure : <a href="http://20.101.100.25/" target="_blank">20.101.100.25</a>
+
 
