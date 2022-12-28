@@ -92,7 +92,6 @@ resource "azurerm_linux_virtual_machine" "VM-TR" {
   admin_username      = "ec2-user"
   custom_data         = filebase64("userdata/azureuserdata.sh")
   disable_password_authentication = false
-  admin_password = "Zxc#^l0n^cLn"
   network_interface_ids = [
     azurerm_network_interface.Grafana_net_int.id,
   ]
