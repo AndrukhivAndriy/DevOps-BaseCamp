@@ -29,3 +29,8 @@ run in shell:
 ## The resoults: 
 
 As the resoult of script we output 2 variables:
+
+![Screenshot_1](https://user-images.githubusercontent.com/79985930/209865748-176d306e-1a70-4282-8667-7af9d0941be1.png)
+
+![Screenshot_2](https://user-images.githubusercontent.com/79985930/209865749-e04f7045-d392-4e67-ae68-f80313361725.png)
+![Screenshot_3](https://user-images.githubusercontent.com/79985930/209865751-523239ed-5375-4a59-8f1b-93728fa2e808.png)
