@@ -2,12 +2,12 @@
 
 As my grandma likes AWS more than Azure - it was realized next schema:
 
-Module AWS[https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/aws](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/aws): 
+Module AWS: -- [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/aws](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/aws)
 
 - Auto Scaling Group;
 - Load Balancer (that is why the export is domain name, not IP)
 
-Module Azure[https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/azure](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/azure):
+Module Azure: -- [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/azure](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main/modules/azure)
 
 - Simple VM with installed Grafana;
 - port redirect via shell script (3000 -> 80)
@@ -44,9 +44,9 @@ And the screenshots from browser are there:
 So, the links:
 
 
-Hello from AWS : <a href="http://Grafana-elb-292409992.eu-central-1.elb.amazonaws.com" target="_blank">Grafana-elb-292409992.eu-central-1.elb.amazonaws.com</a>
+Hello Grafana from AWS : <a href="http://Grafana-elb-292409992.eu-central-1.elb.amazonaws.com" target="_blank">Grafana-elb-292409992.eu-central-1.elb.amazonaws.com</a>
     
-Hello from Azure : <a href="http://20.101.100.25/" target="_blank">20.101.100.25</a>
+Hello Grafana from Azure : <a href="http://20.101.100.25/" target="_blank">20.101.100.25</a>
 
 And the hole script, by the link: [https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main](https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/Terraform_main)
 
