@@ -19,8 +19,8 @@
   - name: Add rule to check for user name in password
     lineinfile:
       path: /etc/pam.d/common-password
-      regexp: 'pam_pwquality.so'
-      line: 'password requisite pam_pwquality.so retry=3 minlen=8 usercheck = 1 lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1 minclass=4 enforce_for_root'
+      regexp: 'password.*requisite.*pam_cracklib.so.*'
+      line: 'password requisite pam_cracklib.so try_first_pass retry=3 minlen=8 usercheck = 1 enforce_for_root reject_username'
       state: present
 
                                                                                                                 
