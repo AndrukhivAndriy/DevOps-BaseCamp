@@ -30,4 +30,6 @@ The playbook starts by installing the pam_cracklib package, which is used to enf
         
 ## Resoults
 
+Let's try to add new user with name **user**. When we are trying to type a password like **Passforuser** we get a warning **BAD PASSWORD: contains the user name in some form** and than we have to generate new password without username. See screenshot.
 
+![Screenshot_10](https://user-images.githubusercontent.com/79985930/212536551-d82d38ff-5a79-4657-8e25-91a87afa81cb.png)
