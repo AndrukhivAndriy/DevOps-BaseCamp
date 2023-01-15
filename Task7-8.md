@@ -6,7 +6,7 @@ There are two ways to solve this task. At the end - we will have the same resoul
     
 ## Way#1. Using pamd module
 
-The playbook is available by the link: (https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/1c34220554bcc827f39d188dc690358fe0ef1d99/ansible/pinga.yml)[https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/1c34220554bcc827f39d188dc690358fe0ef1d99/ansible/pinga.yml]
+The playbook is available by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/1c34220554bcc827f39d188dc690358fe0ef1d99/ansible/pinga.yml
 
 The playbook will add line
 
@@ -16,7 +16,7 @@ to */etc/pam.d/common-password* after line *password   [success=1 default=ignore
 
 ## Way#2. Insert password rule directly.
 
-The playbook is available by the link: (https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/8a594f62c5d2eb726e3bb2e3d67b66389b5a0e31/ansible/main2.yml)[https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/8a594f62c5d2eb726e3bb2e3d67b66389b5a0e31/ansible/main2.yml]
+The playbook is available by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/8a594f62c5d2eb726e3bb2e3d67b66389b5a0e31/ansible/main2.yml
 
 **Common explanation for playbooks:**
 
