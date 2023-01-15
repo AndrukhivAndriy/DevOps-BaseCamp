@@ -22,9 +22,9 @@ The playbook is available by the link: (https://github.com/AndrukhivAndriy/DevOp
 
 The playbook starts by installing the pam_cracklib package, which is used to enforce password complexity rules. Next, the playbook updates the /etc/pam.d/common-password file to include the following settings:
 
-        **try_first_pass**: this tells pam_cracklib to use the password entered by the user as the first password to check.
-        **retry=3**: this tells pam_cracklib to give the user 3 chances to enter a valid password before failing.
-        **minlen=8**: this tells pam_cracklib to require a minimum password length of 8 characters.
-        **reject_username**: this tells pam_cracklib to reject passwords that contain the username.
+        try_first_pass: this tells pam_cracklib to use the password entered by the user as the first password to check.
+        retry=3: this tells pam_cracklib to give the user 3 chances to enter a valid password before failing.
+        minlen=8: this tells pam_cracklib to require a minimum password length of 8 characters.
+        reject_username: this tells pam_cracklib to reject passwords that contain the username.
         
 
