@@ -1,0 +1,28 @@
+---
+- name: test
+  hosts: all
+  become: yes
+  
+  tasks:
+  - name: Install pam_cracklib package
+      apt:
+        name: libpam-cracklib
+        state: present
+                  
+  - name: insert new rule
+    pamd:
+     name: 'common-password'
+     type: 'password'
+     control: '[success=1 default=ignore]'
+     module_path: 'pam_unix.so'
+     new_type: 'password'
+     new_control: 'required'
+     new_module_path: 'pam_cracklib.so'
+     module_arguments:
+       - 'try_first_pass'
+       - 'retry=3'
+       - 'minlen=8'
+       - 'reject_username'
+     state: 'after'
+  
+  
