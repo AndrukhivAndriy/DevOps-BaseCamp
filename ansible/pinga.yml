@@ -1,5 +1,5 @@
 ---
-- name: test
+- name: Harden user's passwords by rejecting the ones that contain a username.
   hosts: all
   become: yes
   
