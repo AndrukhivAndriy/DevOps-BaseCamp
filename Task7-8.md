@@ -1,4 +1,4 @@
-Task: https://docs.google.com/presentation/d/1dWpGENLxnHXEjVzua42dJnQ-B1dsiRdzCTLU_9OJNn4/edit#slide=id.p6
+**Task:** https://docs.google.com/presentation/d/1dWpGENLxnHXEjVzua42dJnQ-B1dsiRdzCTLU_9OJNn4/edit#slide=id.p6
 
 There are two ways to solve this task. At the end - we will have the same resoult. Playbooks where tested on AWS AMI Ubuntu 22.04 The playbooks will add to /etc/pam.d/common-password line like this:
 
@@ -16,3 +16,4 @@ to */etc/pam.d/common-password* after line *password   [success=1 default=ignore
 
 ## Way#2. Insert password rule directly.
 
+The playbook is available by the link: 
