@@ -1,5 +1,4 @@
-# Task:
-https://docs.google.com/presentation/d/1dWpGENLxnHXEjVzua42dJnQ-B1dsiRdzCTLU_9OJNn4/edit#slide=id.p6
+Task: https://docs.google.com/presentation/d/1dWpGENLxnHXEjVzua42dJnQ-B1dsiRdzCTLU_9OJNn4/edit#slide=id.p6
 
 There are two ways to solve this task. At the end - we will have the same resoult. Playbooks where tested on AWS AMI Ubuntu 22.04 The playbooks will add to /etc/pam.d/common-password line like this:
 
@@ -7,10 +6,13 @@ There are two ways to solve this task. At the end - we will have the same resoul
     
 ## Way#1. Using pamd module
 
-The playbook is available by the link: 
+The playbook is available by the link: (https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/1c34220554bcc827f39d188dc690358fe0ef1d99/ansible/pinga.yml)[https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/1c34220554bcc827f39d188dc690358fe0ef1d99/ansible/pinga.yml]
 
 The playbook will add line
 
     password   required pam_cracklib.so try_first_pass retry=3 minlen=8 reject_username
 
 to */etc/pam.d/common-password* after line *password   [success=1 default=ignore] pam_unix.so obscure yescrypt*
+
+## Way#2. Insert password rule directly.
+
