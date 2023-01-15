@@ -22,6 +22,7 @@
        - 'try_first_pass'
        - 'retry=3'
        - 'minlen=8'
+       - 'enforce_for_root'
        - 'reject_username'
      state: 'after'
   
