@@ -1,0 +1,52 @@
+---
+- name: Password policy hardening with PAM
+  hosts: all
+  become: true
+  
+  tasks:
+#  - name: Install libpam-pwquality package
+#    apt:
+#      name: libpam-pwquality
+#      state: present
+
+  - name: Install pam_cracklib package
+    apt:
+      name: libpam-cracklib
+      state: present
+
+                              
+  - name: Create a new file in /etc/pam.d/
+    file:
+      path: /etc/pam.d/common-password
+      state: touch
+                      
+  - name: Add rule to check for user name in password
+    lineinfile:
+      path: /etc/pam.d/common-password
+      regexp: 'pam_pwquality.so'
+      line: 'password requisite pam_pwquality.so retry=3 minlen=8 usercheck = 1 lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1 minclass=4 enforce_for_root'
+      state: present
+
+#  - name: Reload pam configuration
+#    command: 
+#     pam-auth-update --force                                                    
+
+#  - name: Restart PAM service
+#    service:
+#      name: pam
+#      state: restarted
+      
+#  - name: Update /etc/pam.d/common-password
+#    lineinfile:
+#      path: /etc/pam.d/common-password
+#      regexp: '^password.*pam_pwquality.so.*'
+#      line: "password [success=1 default=ignore] pam_pwquality.so retry=3 minlen=8 difok=3 reject_username"
+
+#  - name: Test user creation with password containing username
+#    shell: useradd testuser -p testuser
+#    register: user_add_output
+#    ignore_errors: true
+            
+#  - name: Check if user creation failed
+#    failed_when: "user_add_output.rc != 9"
+#    msg: "User creation with password containing username was not rejected. Please check PAM configuration."                                                                                                                        
