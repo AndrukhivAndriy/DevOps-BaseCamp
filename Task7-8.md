@@ -14,7 +14,7 @@ The playbook will add line
 
 to */etc/pam.d/common-password* after line *password   [success=1 default=ignore] pam_unix.so obscure yescrypt*
 
-## Way#2. Insert password rule directly.
+## Way#2(optional). Insert password rule directly.
 
 The playbook is available by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/8a594f62c5d2eb726e3bb2e3d67b66389b5a0e31/ansible/main2.yml
 
