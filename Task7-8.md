@@ -9,6 +9,7 @@ In both cases we will use **pam_cracklib** package, not **pam_pwquality.so**, be
 ## Way#1. Using pamd module
 
 The playbook is available by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/ansible/pinga.yml
+
 The playbook will add line
 
     password   required pam_cracklib.so try_first_pass retry=3 minlen=8 reject_username
