@@ -57,7 +57,7 @@ Via *ssh-keygen* just create pub and private keys and put them into GitHub and J
 
 ![Screenshot_18](https://user-images.githubusercontent.com/79985930/213903470-c10549fc-450d-45bd-ac18-80a137658811.png)
 
-**P.S.** The weather on this screenshot is not good, becouse before i tested pipelines. 
+**P.S.** The weather on this screenshot is not good, becouse before i tested Jenkinsfile. 
 
 **Step4**. Create Jenkinsfile for every branch. 
 
