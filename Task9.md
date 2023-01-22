@@ -74,8 +74,38 @@ You can find pipeline for branch **dev** by the link: https://github.com/Andrukh
 Build project for every branch manualy and look to the Consule output:
 
 <table>
+    <tr>
+    <th> MAIN BRANCH
+        </th>
+        <th>
+            DEV BRANCH
+        </th>
+    </tr>
     <tr> 
-        <th></th>
-        <th></th>
+        <td> <img src="https://user-images.githubusercontent.com/79985930/213904349-81b48ef6-3d05-44a0-b56a-d2727d81cacd.png"> </td>
+        <td> <img src="https://user-images.githubusercontent.com/79985930/213904403-e5209520-a665-4e45-b7cc-0fa959639d4c.png"> </td>
+    </tr>
+    </table>
+
+**In pipelines we are using 2 system variables:**
+
+        BUILD_ID -- number of build 
+        JENKINS_URL - where Jenkins is working
+        
+**RESOULTS**
+
+As we deploy index.html to Nginx - let's see on those web pages:
+
+<table>
+    <tr>
+    <th> MAIN BRANCH
+        </th>
+        <th>
+            DEV BRANCH
+        </th>
+    </tr>
+    <tr> 
+        <td> <img src="https://user-images.githubusercontent.com/79985930/213904349-81b48ef6-3d05-44a0-b56a-d2727d81cacd.png"> </td>
+        <td> <img src="https://user-images.githubusercontent.com/79985930/213904403-e5209520-a665-4e45-b7cc-0fa959639d4c.png"> </td>
     </tr>
     </table>
