@@ -68,3 +68,14 @@ On the stage (Notification on Telegram) we just send information to telegram bot
 The pipeline for branch **dev** is similar, so will not describe it. The reaseon - on stage (Test code) we are looking for word "DEVELOP", not "MAIN". 
 
 You can find pipeline for branch **dev** by the link: https://github.com/AndrukhivAndriy/for_jenkins/blob/dev/Jenkinsfile
+
+**Step5**
+
+Build project for every branch manualy and look to the Consule output:
+
+<table>
+    <tr> 
+        <th></th>
+        <th></th>
+    </tr>
+    </table>
