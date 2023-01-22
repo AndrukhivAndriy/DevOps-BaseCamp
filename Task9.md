@@ -34,9 +34,13 @@ As the resoult we have:
 - Docker image with Jenkins, created user and installed plugins;
 - outputvars - will show public IP
 
+To install Jenkins manualy follow this link: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
+
+OR you can create a simple bash script and paste this script to block *User data*
+
 ## Solving task with Multibranches
 
-**Step1**. Create a repo with 2 branches - **main** and **dev**. With 2 files: 
+**Step1**. Create a GitHub repo with 2 branches - **main** and **dev**. With 2 files: 
 
 - **index.html** - will deploy on web server
 - **Jenkinsfile** - pipeline for every branch
@@ -45,7 +49,7 @@ Repo is accesible by the link - https://github.com/AndrukhivAndriy/for_jenkins
 
 **Step2**. Create Credentials to access GitHub. 
 
-Via *ssh-keygen* just create pub and private keys and put them into GitHub and jour Jenkins.
+Via *ssh-keygen* just create pub and private keys and put them into GitHub and Jenkins.
 
 ![Screenshot_17](https://user-images.githubusercontent.com/79985930/213903320-b0f64b86-789b-4930-84aa-78b24b60299f.png)
 
@@ -57,7 +61,7 @@ Via *ssh-keygen* just create pub and private keys and put them into GitHub and j
 
 **Step4**. Create Jenkinsfile for every branch. 
 
-Let's see to pipeline for **main** branch. Code you can find by the link: https://github.com/AndrukhivAndriy/for_jenkins/blob/main/Jenkinsfile
+Let's go to Jenkinsfile in **main** branch. Code you can find by the link: https://github.com/AndrukhivAndriy/for_jenkins/blob/main/Jenkinsfile
 
 On the stage (Test code) we try to find word "MAIN" in file index.html. Test is FAILED when there are no word "MAIN" in index.html
 
