@@ -110,5 +110,25 @@ As we deploy index.html to Nginx - let's see on those web pages:
     </tr>
     </table>
     
-And notifications on my Telegram:
+And notifications on my Telegram (created Jenkinsbot):
+
+![Screenshot_23](https://user-images.githubusercontent.com/79985930/213904979-0f69c8c7-5324-4a55-bf70-f2ff5d1f4661.png)
+
+## Integration Jenkins with GitHub via WebHook
+
+If you wish to automate the build process in the multibranch pipeline we can use Webhook. This feature is not enabled until we install “Multibranch Scan Webhook Trigger”. This enables an option “scan by webhook” under “Scan Multibranch Pipeline Triggers”. Here we should give a token. I am giving it as “mytoken”. by this time job looks something like below.
+
+**STEP1**. 
+
+Install plugin *multibranch-scan-webhook-trigger*
+
+**STEP2**
+
+Add trigger: Scan Repository Triggers in Menu
+
+![Screenshot_25](https://user-images.githubusercontent.com/79985930/213906347-28810570-ca37-4e31-a50b-05dc8973df1f.png)
+
+Add WebHook to GitHub
+
+![Screenshot_26](https://user-images.githubusercontent.com/79985930/213906429-7fe719ff-0f31-46d6-81cd-cc01ff220109.png)
 
