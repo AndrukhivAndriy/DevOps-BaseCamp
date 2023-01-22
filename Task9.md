@@ -105,7 +105,10 @@ As we deploy index.html to Nginx - let's see on those web pages:
         </th>
     </tr>
     <tr> 
-        <td> <img src="https://user-images.githubusercontent.com/79985930/213904349-81b48ef6-3d05-44a0-b56a-d2727d81cacd.png"> </td>
-        <td> <img src="https://user-images.githubusercontent.com/79985930/213904403-e5209520-a665-4e45-b7cc-0fa959639d4c.png"> </td>
+        <td> <img src="https://user-images.githubusercontent.com/79985930/213904885-b091d2a4-2a10-41df-a254-dda59cbabca9.png"> </td>
+        <td> <img src="https://user-images.githubusercontent.com/79985930/213904886-8b5101f5-e1ad-4373-b145-0cb2462eddc7.png"> </td>
     </tr>
     </table>
+    
+And notifications on my Telegram:
+
