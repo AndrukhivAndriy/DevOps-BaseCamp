@@ -63,11 +63,11 @@ Via *ssh-keygen* just create pub and private keys and put them into GitHub and J
 
 Let's go to Jenkinsfile in **main** branch. Code you can find by the link: https://github.com/AndrukhivAndriy/for_jenkins/blob/main/Jenkinsfile
 
-On the stage (Test code) we try to find word "MAIN" in file index.html. Test is FAILED when there are no word "MAIN" in index.html
+- On the stage (Test code) we try to find word "MAIN" in file index.html. Test is FAILED when there are no word "MAIN" in index.html
 
-On the stage (Deploy code) we just copy index.html to Nginx root. 
+- On the stage (Deploy code) we just copy index.html to Nginx root. 
 
-On the stage (Notification on Telegram) we just send information to telegram bot. 
+- On the stage (Notification on Telegram) we just send information to telegram bot. 
 
 The pipeline for branch **dev** is similar, so will not describe it. The reaseon - on stage (Test code) we are looking for word "DEVELOP", not "MAIN". 
 
