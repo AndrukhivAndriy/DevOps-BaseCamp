@@ -2,6 +2,9 @@ provider "aws" {
     region = var.region
   
 }
+
+# Find the last AMI
+
 data "aws_ami" "amazon_linux_latest" {
 
     owners = ["amazon"]
@@ -12,6 +15,8 @@ data "aws_ami" "amazon_linux_latest" {
 
     }
 }
+
+# Creating a security group. List of open ports are in variable - secgr_ports 
 
 resource "aws_security_group" "jenkinsserver" {
     name = "Sec group for Jenkins"
@@ -40,6 +45,8 @@ resource "aws_security_group" "jenkinsserver" {
 
 }
 
+# Creating Key Pair
+
 resource "tls_private_key" "oskey" {
   algorithm = "RSA"
 }
@@ -53,6 +60,8 @@ resource "aws_key_pair" "key121" {
   key_name   = "myterrakey"
   public_key = tls_private_key.oskey.public_key_openssh
 }
+
+# Creating EC2 Instance. To create a docker image - we have to copy there some scripts
 
 resource "aws_instance" "jenkins_server" {
   ami           = data.aws_ami.amazon_linux_latest.id
@@ -89,8 +98,6 @@ provisioner "remote-exec" {
 
             # steps to setup docker ce
             "sudo yum update -y",
-            "sudo yum install nginx -y",
-            "sudo amazon-linux-extras install docker -y",
             "sudo service docker start",
             "cd /tmp",
             "cd /tmp && sudo docker build -t jenkins:jcasc .",
