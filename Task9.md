@@ -118,6 +118,8 @@ And notifications on my Telegram (created Jenkinsbot):
 
 ![Screenshot_23](https://user-images.githubusercontent.com/79985930/213904979-0f69c8c7-5324-4a55-bf70-f2ff5d1f4661.png)
 
+Notifications were realized via Jenkins plugins: Telegram Bot + telegram-notifications-plugin
+
 ## Integration Jenkins with GitHub via WebHook
 
 If you wish to automate the build process in the multibranch pipeline we can use Webhook. This feature is not enabled until we install “Multibranch Scan Webhook Trigger”. This enables an option “scan by webhook” under “Scan Multibranch Pipeline Triggers”. Here we should give a token. I am giving it as “mytoken”. by this time job looks something like below.
