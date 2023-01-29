@@ -92,3 +92,27 @@ Join the worker node to the cluster:
 
         sudo kubeadm join 10.156.0.24:6443 --token 0ljn07.0qea1aefc1nshhx2 \
                 --discovery-token-ca-cert-hash sha256:4501c89c5b4ea94e8632ca36....
+
+Output ($ kubectl get nodes):
+
+![Screenshot_23](https://user-images.githubusercontent.com/79985930/215321030-4e7f50d4-f5c9-434e-9c8a-ef5e5bff2ec0.png)
+
+### Step 7.  Install Calico Pod Network Add-on
+
+Run following curl and kubectl command to install Calico network plugin from the master node:
+
+        $ curl https://projectcalico.docs.tigera.io/manifests/calico.yaml -O
+        $ kubectl apply -f calico.yaml
+        
+Verify the status of pods in kube-system namespace ($ kubectl get pods -n kube-system):
+
+![Screenshot_24](https://user-images.githubusercontent.com/79985930/215321444-160b506f-9649-4726-8f62-df1dd89fd3b2.png)
+
+# RESOULT
+
+Check the nodes status as well:
+
+        $ kubectl get pods --all-namespaces -w
+        $ kubectl get nodes
+        
+![Screenshot_25](https://user-images.githubusercontent.com/79985930/215321654-b40cbce1-a3f3-4a39-807b-ba5b9be4178b.png)
