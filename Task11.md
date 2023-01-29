@@ -69,8 +69,26 @@ Run the following Kubeadm command from the master node only:
 
     $ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
     
-Output of above command
+Output of above command:
     
 ![Screenshot_21](https://user-images.githubusercontent.com/79985930/215320387-89f4c5f6-5621-4799-ba8b-7090251395ae.png)
     
-    
+To start interacting with cluster, run following commands from the master node:
+
+        $ mkdir -p $HOME/.kube
+        $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+        $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+        
+To view cluster and node status:
+
+        $ kubectl cluster-info
+        $ kubectl get nodes
+        
+Output:
+
+![Screenshot_22](https://user-images.githubusercontent.com/79985930/215320727-70c764c4-31a6-4fb8-90f5-cec79fe99d61.png)
+
+Join the worker node to the cluster:
+
+        sudo kubeadm join 10.156.0.24:6443 --token 0ljn07.0qea1aefc1nshhx2 \
+                --discovery-token-ca-cert-hash sha256:4501c89c5b4ea94e8632ca36....
