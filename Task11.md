@@ -2,7 +2,7 @@
 
 ## Solution
 
-### Step 1. Create Master and Slave instances in Google Cloud.
+### Step 1. Create Master and Slave instances in Google Cloud. With Ubuntu 22
 
 ![Screenshot_20](https://user-images.githubusercontent.com/79985930/215317078-5efc6abc-38b5-49ed-9ffc-3bd958ab22bd.png)
 
