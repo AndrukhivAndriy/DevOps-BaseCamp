@@ -116,3 +116,12 @@ Check the nodes status as well:
         $ kubectl get nodes
         
 ![Screenshot_25](https://user-images.githubusercontent.com/79985930/215321654-b40cbce1-a3f3-4a39-807b-ba5b9be4178b.png)
+
+# PLAY the K8S (Optional)
+
+Let's register on https://labs.play-with-k8s.com/ via GitHub account.
+
+Create 3 slaves and 1 master:
+
+![Screenshot_26](https://user-images.githubusercontent.com/79985930/215340578-fce6a857-4c79-4905-a45b-de6f9b7d7a81.png)
+
