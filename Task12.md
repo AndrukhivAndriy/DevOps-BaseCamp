@@ -16,3 +16,7 @@ You can then inspect this file to see information such as the node name, status,
 The resoult: 
 
 ![Screenshot_4](https://user-images.githubusercontent.com/79985930/216038274-99c9abb4-789e-4af8-b85d-e0d18b3bdc41.png)
+
+3. Verify that our cluster is empty:
+
+![Screenshot_5](https://user-images.githubusercontent.com/79985930/216041027-6e04faef-ff22-422d-bb5d-72ffef2f72cf.png)
