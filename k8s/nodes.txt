@@ -1,0 +1,3 @@
+NAME     STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
+master   Ready    control-plane   3d    v1.26.1   10.156.0.24   <none>        Ubuntu 22.04.1 LTS   5.15.0-1027-gcp   containerd://1.6.15
+slave    Ready    <none>          3d    v1.26.1   10.156.0.25   <none>        Ubuntu 22.04.1 LTS   5.15.0-1027-gcp   containerd://1.6.15
