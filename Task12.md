@@ -9,7 +9,7 @@
 The -o wide flag provides additional information about the nodes, and the > nodes.txt redirects the output to a file named nodes.txt. 
 You can then inspect this file to see information such as the node name, status, and capacity. Link to nodes.txt - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/f1a1d43ba0933695922ec45d1531511a94fa30f0/k8s/nodes.txt
 
-The hole K8s manifest wich create Deployment and Services is available by the link:  
+**The hole K8s manifest wich create Deployment and Services is available by the link:** https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/21f9f0745bc51acd45cf0b86171ef57e03fd69f4/k8s/deployment.yaml  
 
 2. You can create a new namespace in Kubernetes using the following command:
 
