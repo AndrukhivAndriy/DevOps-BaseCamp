@@ -9,6 +9,8 @@
 The -o wide flag provides additional information about the nodes, and the > nodes.txt redirects the output to a file named nodes.txt. 
 You can then inspect this file to see information such as the node name, status, and capacity. Link to nodes.txt - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/f1a1d43ba0933695922ec45d1531511a94fa30f0/k8s/nodes.txt
 
+The hole K8s manifest wich create Deployment and Services is available by the link:  
+
 2. You can create a new namespace in Kubernetes using the following command:
 
         kubectl create namespace <namespace-name>
@@ -17,6 +19,31 @@ The resoult:
 
 ![Screenshot_4](https://user-images.githubusercontent.com/79985930/216038274-99c9abb4-789e-4af8-b85d-e0d18b3bdc41.png)
 
-3. Verify that our cluster is empty:
+Verify that our cluster is empty:
 
 ![Screenshot_5](https://user-images.githubusercontent.com/79985930/216041027-6e04faef-ff22-422d-bb5d-72ffef2f72cf.png)
+
+Create Deployment with 3 replicas in "basecamp" namespace:
+
+![Screenshot_6](https://user-images.githubusercontent.com/79985930/216304654-53081eff-37f0-4274-9c58-273c6b484d4d.png)
+
+**Create ClusterIP Service:**
+
+![Screenshot_7](https://user-images.githubusercontent.com/79985930/216305147-9ee00ca6-ea8c-4dec-865c-f2f5e94ded5a.png)
+
+Let's check how it works. Go to the worker node via ssh and check the default Nginx page:
+
+![Screenshot_8](https://user-images.githubusercontent.com/79985930/216306157-a6da8e68-b7a4-4dbe-90fa-8dacfe47dd43.png)
+
+**Create NodePort service:**
+
+![Screenshot_9](https://user-images.githubusercontent.com/79985930/216309804-92d284bd-40c4-4946-8f01-89e9f8875a61.png)
+
+Let's check nodes IP:
+
+![Screenshot_10](https://user-images.githubusercontent.com/79985930/216310254-1b44b051-f98b-442d-b088-4662ef01f8e6.png)
+
+And go to worker node and check default Nginx page via 30080 port:
+
+![Screenshot_11](https://user-images.githubusercontent.com/79985930/216310680-848c56c1-69ff-4073-b007-c1f43e32a85b.png)
+
