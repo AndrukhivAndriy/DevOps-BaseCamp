@@ -47,3 +47,6 @@ And go to worker node and check default Nginx page via 30080 port:
 
 ![Screenshot_11](https://user-images.githubusercontent.com/79985930/216310680-848c56c1-69ff-4073-b007-c1f43e32a85b.png)
 
+And logs from one of the pods:
+
+![Screenshot_12](https://user-images.githubusercontent.com/79985930/216337904-507d26a7-4c38-41fe-bf5f-dc4a33f18b48.png)
