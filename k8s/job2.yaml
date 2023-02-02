@@ -1,12 +1,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: curl-nginx-job
+  name: curl-nginx-nodeport
 spec:
   template:
     spec:
       containers:
-      - name: curl-nginx
+      - name: curl-nginx-nodeport
         image: radial/busyboxplus:curl
         command:
         - sh
