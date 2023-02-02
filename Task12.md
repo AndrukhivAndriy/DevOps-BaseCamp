@@ -50,3 +50,19 @@ And go to worker node and check default Nginx page via 30080 port:
 And logs from one of the pods:
 
 ![Screenshot_12](https://user-images.githubusercontent.com/79985930/216337904-507d26a7-4c38-41fe-bf5f-dc4a33f18b48.png)
+
+4. A Kubernetes Job manifest file that will curl an Nginx page via ClusterIP is available - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/3e7106247a15af778ab110a8d329e22e5d627843/k8s/Job1.yaml
+
+The resoult is on next screen:
+
+![Screenshot_27](https://user-images.githubusercontent.com/79985930/216423899-e87ba786-dd7e-4759-9675-617c70450c80.png)
+
+This job uses the radial/busyboxplus:curl image, which includes the curl utility, and runs a shell script that uses curl to access the Nginx default webpage on ClusterIP. The backoffLimit field specifies the number of retries the job will make before giving up. The restartPolicy field is set to Never to prevent the pod from restarting if the curl command fails.
+
+The second job is right the same, so i will not describe it. Resolts:
+
+![Screenshot_28](https://user-images.githubusercontent.com/79985930/216428005-6c958946-78a0-487b-8dae-7f55f6bc063f.png)
+
+Manifest is available by the link - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/3e7106247a15af778ab110a8d329e22e5d627843/k8s/job2.yaml
+
+5. 
