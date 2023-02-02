@@ -12,6 +12,6 @@ spec:
         - sh
         - -c
         - |
-          curl http://nginx-pod:80
+          curl http://10.108.51.122:80
       restartPolicy: Never
   backoffLimit: 4
