@@ -65,4 +65,8 @@ The second job is right the same, so i will not describe it. Resolts:
 
 Manifest is available by the link - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/3e7106247a15af778ab110a8d329e22e5d627843/k8s/job2.yaml
 
-5. 
+5. **Full manifest is available by the link -** https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/583ee9d4372a35ed043bf29d142f42a2d0716f53/k8s/job3.yaml
+
+Resoults:
+
+![Screenshot_29](https://user-images.githubusercontent.com/79985930/216635838-1e9cdada-5242-438b-8b14-c1ec62f164ae.png)
