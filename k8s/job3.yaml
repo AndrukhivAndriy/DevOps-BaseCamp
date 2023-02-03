@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: test-web-connection
-            image: alpine:3.12
+            image: curlimages/curl
             command: ["/bin/sh"]
-            args: ["-c", "curl http://10.108.51.122:80"]
-          restartPolicy: OnFailure
+            args: ["-c", "curl http://10.156.0.25:30080"]
+          restartPolicy: Never
