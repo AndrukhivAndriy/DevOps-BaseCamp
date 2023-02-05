@@ -57,3 +57,9 @@ kubectl get svc –all-namespaces
 Try curl: 
 
 ![Screenshot_16](https://user-images.githubusercontent.com/79985930/216818695-56ca4fc9-bbb0-4642-8ec4-3a369c3d96df.png)
+
+PATCH: 
+
+                    sudo kubectl patch service ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["35.195.226.243"]}}'
+                    
+![Screenshot_17](https://user-images.githubusercontent.com/79985930/216820071-8fe8c018-d088-4d57-9780-3a9c169ea545.png)
