@@ -53,3 +53,7 @@ kubectl get pods -n ingress-nginx -w
 kubectl get svc –all-namespaces
 
 ![Screenshot_15](https://user-images.githubusercontent.com/79985930/216811818-6d8fdde3-1204-47c3-b9fa-26b6f318051d.png)
+
+Try curl: 
+
+![Screenshot_16](https://user-images.githubusercontent.com/79985930/216818695-56ca4fc9-bbb0-4642-8ec4-3a369c3d96df.png)
