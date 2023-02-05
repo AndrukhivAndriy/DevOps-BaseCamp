@@ -10,19 +10,13 @@
 
 3. Install packages:
 
-     apt install python3-pip
-    
-      cd /kubespray
-    
-       pip install -r requirements.txt
-    
-       pip3 install -r contrib/inventory_builder/requirements.txt
-    
-      cp -rfp inventory/sample inventory/mycluster
-    
-      declare -a IPS=(EXTERNAL_IP)
-    
-      CONFIG_FILE=/home/ubuntu/kubespray/inventory/mycluster/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
+          apt install python3-pip
+          cd /kubespray
+          pip install -r requirements.txt
+          pip3 install -r contrib/inventory_builder/requirements.txt
+          cp -rfp inventory/sample inventory/mycluster
+          declare -a IPS=(EXTERNAL_IP)
+          CONFIG_FILE=/home/ubuntu/kubespray/inventory/mycluster/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
     
     
 4. Config Cluster:
