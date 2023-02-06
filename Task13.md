@@ -88,3 +88,31 @@ In this case, when user type in browser http://andrukhiv.hopto.org/banana  - he 
 ![Screenshot_18](https://user-images.githubusercontent.com/79985930/216986100-e7a113ad-276b-419d-a6bb-a74013b22c32.png)
 
 https://www.youtube.com/watch?v=8ULmDxTzAVQ&list=PL3SzV1_k2H1VDePbSWUqERqlBXIk02wCQ&index=16
+
+13. **Let's make connection secure.** 
+
+Install cert-manager: 
+
+                    kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
+                    
+Run ClusterIssue (staging): code by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/clissuer.yaml
+
+![Screenshot_18](https://user-images.githubusercontent.com/79985930/217063235-b03cd4ac-7ea2-413c-a29a-99b9e1a13225.png)
+
+Change Ingress (add tls). Code is here - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/newclingress.yaml
+
+And check in browser:
+
+![Screenshot_19](https://user-images.githubusercontent.com/79985930/217067925-ceb9e10a-70c5-4e8e-afe8-a566a27569df.png)
+
+Everything is fine. Change configs to production:
+
+Run ClusterIssue (prod): code by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/clusi-prod.yaml
+
+Change Ingress (cert-manager.io/cluster-issuer: "letsencrypt-staging" --> cert-manager.io/cluster-issuer: "letsencrypt-prod")
+
+Check in browser:
+
+![Screenshot_20](https://user-images.githubusercontent.com/79985930/217073156-703e94d8-ff88-476a-aeed-99f395d64765.png)
+
+![Screenshot_21](https://user-images.githubusercontent.com/79985930/217073158-37a0a759-6a25-4aef-beed-a67d6498a775.png)
