@@ -111,7 +111,7 @@ Run ClusterIssue (prod): code by the link: https://github.com/AndrukhivAndriy/De
 
 Change Ingress (cert-manager.io/cluster-issuer: "letsencrypt-staging" --> cert-manager.io/cluster-issuer: "letsencrypt-prod")
 
-Check in browser:
+Check in browser. Connection is secured:
 
 ![Screenshot_20](https://user-images.githubusercontent.com/79985930/217073156-703e94d8-ff88-476a-aeed-99f395d64765.png)
 
