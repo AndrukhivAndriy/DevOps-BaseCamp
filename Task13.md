@@ -75,7 +75,6 @@ In this case, when user type in browser http://andrukhiv.hopto.org/banana  - he 
 
 ![Screenshot_18](https://user-images.githubusercontent.com/79985930/216986100-e7a113ad-276b-419d-a6bb-a74013b22c32.png)
 
-https://www.youtube.com/watch?v=8ULmDxTzAVQ&list=PL3SzV1_k2H1VDePbSWUqERqlBXIk02wCQ&index=16
 
 13. **Let's make connection secure.** 
 
