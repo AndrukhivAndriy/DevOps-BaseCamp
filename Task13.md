@@ -4,7 +4,7 @@
 
 1. Create Instance in GCP with Ubuntu:
 
-![Screenshot_11](https://user-images.githubusercontent.com/79985930/216808382-ee0ab4a9-1e1d-46f1-9e64-a8185e733b17.png)
+![Screenshot_13](https://user-images.githubusercontent.com/79985930/216946719-80dd1c6d-d6b6-480d-a83b-dfe6a211c85e.png)
 
 2. Clone Kubespray release  repository
 
@@ -52,16 +52,6 @@ kubectl get pods -n ingress-nginx -w
 
 kubectl get svc –all-namespaces
 
-![Screenshot_15](https://user-images.githubusercontent.com/79985930/216811818-6d8fdde3-1204-47c3-b9fa-26b6f318051d.png)
+![Screenshot_14](https://user-images.githubusercontent.com/79985930/216947174-82edb6f2-b9b4-4dc9-b448-a7ff6a06e224.png)
 
-Try curl: 
 
-![Screenshot_16](https://user-images.githubusercontent.com/79985930/216818695-56ca4fc9-bbb0-4642-8ec4-3a369c3d96df.png)
-
-PATCH: 
-
-                    sudo kubectl patch service ingress-nginx-controller -n ingress-nginx -p '{"spec": {"type": "LoadBalancer", "externalIPs":["35.195.226.243"]}}'
-                    
-![Screenshot_17](https://user-images.githubusercontent.com/79985930/216820071-8fe8c018-d088-4d57-9780-3a9c169ea545.png)
-
-But via web browser page is not available
