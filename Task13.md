@@ -21,24 +21,13 @@
     
 4. Config Cluster:
 
-- edit hosts.yaml -- change line *ip:* to private IP, comment access_ip string
 - edit all config files like it shown in Task
 
 5. Run Cluster installation 
 
     ansible-playbook -i inventory/mycluster/hosts.yaml -u USER_NAME -b -v --private-key=/home/ubuntu/.ssh/rsa cluster.yml
     
-6. Config Cluster:
-
-    mkdir ~/.kube
-    sudo cp /etc/kubernetes/admin.conf ~/.kube/admin.conf
-
-Edit admin.conf:
-
-    Change the server ip address to public ip address.
-    Replace the line start with certificate-authority-data with insecure-skip-tls-verify: true
-
-Health check:
+6. Health check:
 
 ![Screenshot_12](https://user-images.githubusercontent.com/79985930/216811227-1ab21824-222f-4ba1-842f-10614fd543df.png)
 
@@ -54,7 +43,7 @@ kubectl get svc –all-namespaces
 
 ![Screenshot_14](https://user-images.githubusercontent.com/79985930/216947174-82edb6f2-b9b4-4dc9-b448-a7ff6a06e224.png)
 
-8. Via DynDNS - register External IP to domain - http://andrukhiv.hopto.org/
+8. Via Dynamic DNS - register External IP to domain - http://andrukhiv.hopto.org/
 
 9. Run 2 Deployments with Nginx(2 replicas) and Tomcat(1 replica):
 
@@ -69,6 +58,7 @@ kubectl get svc –all-namespaces
 11. Resoults:
 
 ![Screenshot_15](https://user-images.githubusercontent.com/79985930/216983442-fe2d3589-1127-47f5-8b86-cf9b25fbe277.png)
+
 ![Screenshot_16](https://user-images.githubusercontent.com/79985930/216983527-8fc0181e-316b-4109-b961-6b7079da916f.png)
                    
 12. Create Ingress for access to Nginx via domain http://andrukhiv.hopto.org/
