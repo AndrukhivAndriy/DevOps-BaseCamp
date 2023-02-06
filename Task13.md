@@ -54,4 +54,35 @@ kubectl get svc –all-namespaces
 
 ![Screenshot_14](https://user-images.githubusercontent.com/79985930/216947174-82edb6f2-b9b4-4dc9-b448-a7ff6a06e224.png)
 
+8. Via DynDNS - register External IP to domain - http://andrukhiv.hopto.org/
 
+9. Run 2 Deployments with Nginx(2 replicas) and Tomcat(1 replica):
+
+          kubectl apply -f https://k8s.io/examples/application/deployment.yaml
+          kubectl create deployment tomcat --image=tomcat:8.5.38
+          
+10. Run 2 services:
+
+          kubectl expose deployment nginx-deployment --port=80 --type=ClusterIP
+          kubectl expose deployment tomcat --port=8080 --type=ClusterIP
+                    
+11. Resoults:
+
+![Screenshot_15](https://user-images.githubusercontent.com/79985930/216983442-fe2d3589-1127-47f5-8b86-cf9b25fbe277.png)
+![Screenshot_16](https://user-images.githubusercontent.com/79985930/216983527-8fc0181e-316b-4109-b961-6b7079da916f.png)
+                   
+12. Create Ingress for access to Nginx via domain http://andrukhiv.hopto.org/
+
+Sourcefile is accessible by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/ingr.yaml
+
+If user will type domain in web browser - he will get the default Nginx web page.
+
+![Screenshot_17](https://user-images.githubusercontent.com/79985930/216985052-f9b5d4d6-e2f7-4d47-a2ad-c8ce20c2b3c0.png)
+
+12a. Create Ingres for access to Tomcat via the same domain.
+
+Sourcefile is accessible by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/ingr2.yaml
+
+In this case, when user type in browser http://andrukhiv.hopto.org/banana  - he will get the default Tomcat web page without "/banana" in URL
+
+![Screenshot_18](https://user-images.githubusercontent.com/79985930/216986100-e7a113ad-276b-419d-a6bb-a74013b22c32.png)
