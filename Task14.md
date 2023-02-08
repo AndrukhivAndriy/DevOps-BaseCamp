@@ -14,13 +14,13 @@
     
 3. Install NGINX Ingress Controller using Helm
 
-    helm repo add nginx-stable https://helm.nginx.com/stable
-    helm repo update
+        helm repo add nginx-stable https://helm.nginx.com/stable
+        helm repo update
     
 4. Run Nginx
 
-    $ helm repo add my-repo https://charts.bitnami.com/bitnami
-    $ helm install my-release -f val.yaml my-repo/nginx
+        $ helm repo add my-repo https://charts.bitnami.com/bitnami
+        $ helm install my-release -f val.yaml my-repo/nginx
 
 Resoults:
 
