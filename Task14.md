@@ -30,4 +30,27 @@ Resoults:
 
 Values are in file: https://github.com/bitnami/charts/blob/main/bitnami/nginx/values.yaml
 
+## 2 way
+
+Run:
+
+        helm create app
+        helm install --set image.tag=1.19.3 -n default app ./app
+
+values.yaml was modified (enable Ingress, autoscaling, etc.) Link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/values.yaml
+
+Resoults:
+
+![Screenshot_24](https://user-images.githubusercontent.com/79985930/217559338-4c77888d-e7be-495c-83ac-1bdee3b17dd1.png)
+
+Let's upgrade image:
+
+        helm upgrade --set image.tag=1.19.4 -n default app ./app
+        
+![Screenshot_25](https://user-images.githubusercontent.com/79985930/217562505-a0dd3d4b-bf30-40af-8777-dfe96aa91dc7.png)
+
+        helm upgrade --set image.tag=1.19.5 --set autoscaling.enabled=false -n default app ./app
+
+![Screenshot_26](https://user-images.githubusercontent.com/79985930/217564486-e534a799-91be-4695-bcb6-1666ef917e05.png)
+
 
