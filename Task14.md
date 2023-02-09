@@ -1,6 +1,6 @@
 **Task:** https://docs.google.com/document/d/1PwwgBQpD3E0c-kIeTNX8tegVtSGA5E9Z/edit
 
-## Solution
+## Solution. Task 1
 
 1. Deploy VM with K8s:
 
@@ -54,3 +54,20 @@ Let's upgrade image:
 ![Screenshot_26](https://user-images.githubusercontent.com/79985930/217564486-e534a799-91be-4695-bcb6-1666ef917e05.png)
 
 
+## Solution. Task 2
+
+1. Install Nginx Ingress Controller
+
+        helm repo add nginx-stable https://helm.nginx.com/stable
+        helm repo update
+        helm install nginx-ingress nginx-stable/nginx-ingress --set rbac.create=true --set controller.service.loadBalancerIP=10.132.0.6
+        
+2. Install application pacman via helm cart
+
+           helm install app helmchart/    
+           
+Resouts:
+
+![Screenshot_27](https://user-images.githubusercontent.com/79985930/217758782-ff2c0d86-9333-4899-b290-1222891acc0b.png)
+
+Helm Cart code is here: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/helmchart
