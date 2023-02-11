@@ -71,3 +71,39 @@ Resouts:
 ![Screenshot_27](https://user-images.githubusercontent.com/79985930/217758782-ff2c0d86-9333-4899-b290-1222891acc0b.png)
 
 Helm Cart code is here: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/helmchart
+
+## Mern stack
+
+MERN - frontend (node.js + framework express) + backend (React) + MongoDB
+
+I can't build application (becouse i have time limit) with using MongoDB and frontend + backend. So in this case i will produce saparate solution;
+
+Let's start from **frontend**.
+
+I wrote a very simple code:
+
+                'use strict';
+
+                const express = require('express');
+
+                // Constants
+                const PORT = 8080;
+                const HOST = '0.0.0.0';
+
+                // App
+                const app = express();
+                app.get('/', (req, res) => {
+                res.send('<h1> Hello to everyone from GL BaseCamp </h1>');
+                });
+
+                app.listen(PORT, HOST, () => {
+                console.log(`Running on http://${HOST}:${PORT}`);
+                });
+
+Next step is creating Docker image and push it to DockerHub. You can find this image by the link (Public Repo): https://hub.docker.com/r/libraryprojects/mynodeimg/tags
+
+And deploy it via Helm Chart. You can find code by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/nodechart
+
+The resoults:
+
+![Screenshot_22](https://user-images.githubusercontent.com/79985930/218277262-6e4057bc-c581-4c1d-a7e7-ed8aa5d1f4bb.png)
