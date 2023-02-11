@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-service-react
+  labels:
+    env  : prod
+    owner: AndriyAndrukhiv
+spec:
+  selector:
+    project: {{ .Release.Name }}    # Selecting PODS with those Labels
+  ports:
+    - name      : {{ .Release.Name }}-listener-react
+      protocol  : TCP
+      port      : 8080  # Port on Load Balancer
+      targetPort: 3000  # Port on POD
+#  type: LoadBalancer
