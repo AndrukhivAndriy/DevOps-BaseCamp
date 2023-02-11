@@ -102,8 +102,47 @@ I wrote a very simple code:
 
 Next step is creating Docker image and push it to DockerHub. You can find this image by the link (Public Repo): https://hub.docker.com/r/libraryprojects/mynodeimg/tags
 
-And deploy it via Helm Chart. You can find code by the link: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/nodechart
+And deploy it via Helm Chart. You can find code by the link (with Dockerfile): https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/nodechart
 
 The resoults:
 
 ![Screenshot_22](https://user-images.githubusercontent.com/79985930/218277262-6e4057bc-c581-4c1d-a7e7-ed8aa5d1f4bb.png)
+
+Step **backend**.
+
+Create simple default React script:
+
+                import logo from './logo.svg';
+                import './App.css';
+
+                function App() {
+                return (
+                <div className="App">
+                 <header className="App-header">
+                        <img src={logo} className="App-logo" alt="logo" />
+                 <p>
+                        Hello to everyone. BaseCamp Devops GL
+                        </p>
+                        <a
+                        className="App-link"
+                        href="https://reactjs.org"
+                         target="_blank"
+                        rel="noopener noreferrer"
+                 >
+                          Learn React
+                 </a>
+                 </header>
+                 </div>
+                );
+                }
+
+                export default App;
+                
+Create Docker image, push it to Docker Hub (link is here: https://hub.docker.com/r/libraryprojects/myreactimg
+
+and create Helm Chart (code is here: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/reactchart)
+
+And resoult:
+
+![Screenshot_23](https://user-images.githubusercontent.com/79985930/218280140-3c291d67-80ff-470f-a338-d391c63e345f.png)
+
