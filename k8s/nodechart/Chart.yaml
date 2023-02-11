@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: 0.0.1
+description: Pacman loves Kubernetes
+keywords:
+- game
+- http
+maintainers:
+- email: andrie83@gmail.com
+  name: Andriy Andrukhiv
+name: Pacman-HelmChart
+type: application
+version: 0.1.0
