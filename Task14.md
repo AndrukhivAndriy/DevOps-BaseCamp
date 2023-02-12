@@ -164,6 +164,6 @@ To connect to your database run the following command:
 
 ### 2 way
 
-To deploy MERN for dev :
+To deploy MERN for development or test (becouse most configs are by default):
 
                 helm install mern bitnami/node
