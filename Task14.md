@@ -146,3 +146,24 @@ And resoult:
 
 ![Screenshot_23](https://user-images.githubusercontent.com/79985930/218280140-3c291d67-80ff-470f-a338-d391c63e345f.png)
 
+### Install MongoDB
+
+Install Helm and add the stable repository:
+
+                helm repo add my-repo https://charts.bitnami.com/bitnami
+
+Install the MongoDB with Persistent Volume:
+
+              helm install mongoapp my-repo/mongodb-sharded --set persistence.enabled=true,persistence.storageClass=nfs,persistence.size=2Gi
+                
+To connect to your database run the following command:
+
+                kubectl run --namespace default mongoapp-mongodb-sharded-client --rm --tty -i --restart='Never' --image docker.io/bitnami/mongodb-sharded:6.0.4-debian-         11-r0 --command -- mongosh admin --host mongoapp-mongodb-sharded --authenticationDatabase admin -u root -p $MONGODB_ROOT_PASSWORD
+                
+![Screenshot_24](https://user-images.githubusercontent.com/79985930/218297782-a2545652-2bbf-4c57-8920-4acc10f2f770.png)
+
+### 2 way
+
+To deploy MERN for dev :
+
+                helm install mern bitnami/node
