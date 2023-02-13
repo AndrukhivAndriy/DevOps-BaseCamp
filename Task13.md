@@ -11,12 +11,14 @@
 3. Install packages:
 
           apt install python3-pip -y
+          git clone https://github.com/kubernetes-sigs/kubespray.git
           cd /kubespray
+          git checkout release-2.20
           pip3 install -r requirements.txt
           pip3 install -r contrib/inventory_builder/requirements.txt
           cp -rfp inventory/sample inventory/mycluster
-          #create private ssh key in /home/ubuntu/.ssh/rsa
-          chmod 600 rsa
+          #####create private ssh key in /home/ubuntu/.ssh/rsa
+          #####chmod 600 rsa
           
     
 4. Config Cluster:
