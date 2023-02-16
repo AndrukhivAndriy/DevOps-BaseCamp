@@ -34,6 +34,8 @@ This script will deploy on GCP:
 
 ![Screenshot_26](https://user-images.githubusercontent.com/79985930/219436997-bbbf905d-91d8-4180-a7fc-31c6f6e8a692.png)
 
+
+
 **the database**
 
 ![Screenshot_27](https://user-images.githubusercontent.com/79985930/219437397-f39a88f9-d041-4dbb-bc99-3dfa8f340bae.png)
@@ -45,3 +47,13 @@ This script will deploy on GCP:
 When the main Instance "Wordpress-instance" will deployed - starts metadata_startup_script.
 
 This Bash script consist of several parts and at the end - Kubespray will be deployed. This script have comments. 
+
+### 4 step
+
+You must login to Instance "Wordpress-instance" and define secret to autodeploy Wordpress database:
+
+        kubectl create secret generic dev-db-secret --from-literal=username=wordpress-user --from-literal=password=wordpress  --from-literal=address=10.84.176.3 --from-literal=database=wordpress-db
+        
+Variables *username* and *password* you defined on the begining. Database instance IP you can find via GUI or via terraform output or via Gcloud:
+
+        gcloud sql instances describe $DATABASE_ID --project $PROJECT_ID --format 'value(ipAddresses.ipAddress)'
