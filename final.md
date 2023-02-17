@@ -16,7 +16,7 @@ Install Terraform - https://developer.hashicorp.com/terraform/tutorials/aws-get-
 
 ### 3 step
 
-Download terraform scripts 
+Download terraform scripts https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/terr_final
 
 Run:
 
@@ -24,7 +24,7 @@ Run:
     terraform plan
     terraform apply
     
-This script will deploy on GCP: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/terr_final
+This script will deploy on GCP: 
 
 **the instance**
 
