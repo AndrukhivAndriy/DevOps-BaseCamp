@@ -25,13 +25,11 @@ variable "DB_instance_tier" {
 
 variable "DBusername" {
   description = "Db username"
-  default = "wordpress-user"
   type = string
 }
 
 variable "DBpassword" {
   description = "Db password"
-  default = "wordpress"
   type = string
 }
 
