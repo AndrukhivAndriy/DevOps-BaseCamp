@@ -57,4 +57,6 @@ Variables *username* and *password* you defined on the begining. Database instan
 
         gcloud sql instances describe $DATABASE_ID --project $PROJECT_ID --format 'value(ipAddresses.ipAddress)'
         
+Info from terraform output:
+
  ![Screenshot_28](https://user-images.githubusercontent.com/79985930/219589449-a2f8a166-d7b0-4c68-860d-be05cedb1d2d.png)       
