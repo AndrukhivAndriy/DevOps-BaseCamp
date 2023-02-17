@@ -1,0 +1,51 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  labels:
+    app : {{ .Release.Name }}-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      project: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        project: {{ .Release.Name }}   
+    spec:
+# Create Local Persistence Volume
+      volumes:
+        - name: mypd
+          hostPath:
+            path: /mnt/data   
+      containers:
+        - name : {{ .Release.Name }}-web
+          image: {{ .Values.container.image }}
+          ports:
+            - containerPort: 80
+# Create ENV for Mysql Database
+          env:
+          - name: WORDPRESS_DB_HOST
+            valueFrom:
+              secretKeyRef:
+                name: dev-db-secret
+                key: address
+          - name: WORDPRESS_DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: dev-db-secret
+                key: username
+          - name: WORDPRESS_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: dev-db-secret
+                key: password
+          - name: WORDPRESS_DB_NAME
+            valueFrom:
+              secretKeyRef:
+                name: dev-db-secret
+                key: database
+          volumeMounts:
+          - mountPath: "/var/www/html"
+            name: mypd

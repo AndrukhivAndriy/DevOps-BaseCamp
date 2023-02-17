@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: 0.0.1
+description: Wordpress loves Kubernetes
+keywords:
+- cms
+- http
+maintainers:
+- email: andrie83@gmail.com
+  name: Andriy Andrukhiv
+name: Wordpress-HelmChart
+type: application
+version: 0.1.0
