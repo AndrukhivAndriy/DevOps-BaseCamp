@@ -24,7 +24,7 @@ Run:
     terraform plan
     terraform apply
     
-This script will deploy on GCP:
+This script will deploy on GCP: https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/terr_final
 
 **the instance**
 
@@ -33,7 +33,6 @@ This script will deploy on GCP:
 **the database instance with local access (no public IP)**
 
 ![Screenshot_26](https://user-images.githubusercontent.com/79985930/219436997-bbbf905d-91d8-4180-a7fc-31c6f6e8a692.png)
-
 
 
 **the database**
@@ -46,7 +45,7 @@ This script will deploy on GCP:
 
 When the main Instance "Wordpress-instance" will deployed - starts metadata_startup_script.
 
-This Bash script consist of several parts and at the end - Kubespray will be deployed. This script have comments. 
+This Bash script consist of several parts and at the end - Kubespray will be deployed. This script have comments. Link - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/terr_final/startup.sh
 
 ### 4 step
 
@@ -57,3 +56,5 @@ You must login to Instance "Wordpress-instance" and define secret to autodeploy 
 Variables *username* and *password* you defined on the begining. Database instance IP you can find via GUI or via terraform output or via Gcloud:
 
         gcloud sql instances describe $DATABASE_ID --project $PROJECT_ID --format 'value(ipAddresses.ipAddress)'
+        
+ ![Screenshot_28](https://user-images.githubusercontent.com/79985930/219589449-a2f8a166-d7b0-4c68-860d-be05cedb1d2d.png)       
