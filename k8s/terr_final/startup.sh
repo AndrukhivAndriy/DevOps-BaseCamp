@@ -35,7 +35,7 @@ echo "#Add key for Ansible" >> authorized_keys
 cat id_rsa.pub >> authorized_keys
 chmod 600 /home/ubuntu/.ssh/id_rsa
 # To find local IP - uncomment next line
-#export INIP=`hostname -I | cut -d' ' -f1`
+export INIP=`hostname -I | cut -d' ' -f1`
 
 
 # Deploy K8s Cluster via Kubespray
