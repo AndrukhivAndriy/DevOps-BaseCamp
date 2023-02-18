@@ -34,7 +34,6 @@ This script will deploy on GCP:
 
 ![Screenshot_26](https://user-images.githubusercontent.com/79985930/219436997-bbbf905d-91d8-4180-a7fc-31c6f6e8a692.png)
 
-
 **the database**
 
 ![Screenshot_27](https://user-images.githubusercontent.com/79985930/219437397-f39a88f9-d041-4dbb-bc99-3dfa8f340bae.png)
@@ -87,3 +86,48 @@ Screenshot of deploying Wordpress
 Screenshot of web page
 
 ![Screenshot_30](https://user-images.githubusercontent.com/79985930/219874353-8733fdb3-affd-45d9-9e28-a5bfad2c75f0.png)
+
+## Hardening
+
+1. There are no user's name and passwords in all manifests;
+2. To connect to DB I used Kubernetes Secret ( step 4)
+3. To make Wordpress more secure i Used OWASP/ModSecurity. Let's describe it a bit more.
+
+With the modsecurity-snippet option, its possible to add custom configuration to ModSecurity. The main config file is modsecurity.conf. 
+
+Download it, first:
+
+        kubectl -n ingress-nginx cp <ingress-controller-pod-name>:/etc/nginx/modsecurity/modsecurity.conf ./modsecurity.conf
+        
+Make changes:
+
+...
+# and data leakage issues.
+
+SecResponseBodyAccess Off
+
+SecRuleEngine On
+
+############ DISABLED RULES  #####################
+SecRuleRemoveById 942100
+SecRuleRemoveById 932105
+SecRuleRemoveById 203054
+SecRuleRemoveById 930100.
+SecRuleRemoveById 920170
+SecRuleRemoveById 930110
+
+
+#SecRuleRemoveById 941310
+
+#################################################
+.....
+
+**SecRuleEngine** - change to On, not DetectionOnly
+**SecResponseBodyAccess** - do not analyze response body
+
+And list of disabled rules. I tern off them, becouse some modules of Wordpress will not correctly work. 
+
+Modify file as required and save the file in a ConfigMap.
+
+        kubectl -n ingress-nginx create configmap modsecurityconf --from-file=modsecurity.conf
+
