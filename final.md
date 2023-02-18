@@ -45,7 +45,7 @@ This script will deploy on GCP:
 
 When the main Instance "Wordpress-instance" will deployed - starts metadata_startup_script.
 
-This Bash script consist of several parts and at the end - Kubespray will be deployed. This script have comments. Link - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/terr_final/startup.sh
+This Bash script consist of several parts and at the end - Kubernetes Cluster will be deployed via Kubespray. This script have comments. Link - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/terr_final/startup.sh
 
 ### 4 step
 
