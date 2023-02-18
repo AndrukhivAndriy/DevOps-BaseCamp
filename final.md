@@ -91,7 +91,7 @@ Screenshot of web page
 
 1. There are no user's name and passwords in all manifests;
 2. To connect to DB I used Kubernetes Secret ( step 4)
-3. To make Wordpress more secure i Used OWASP/ModSecurity. Let's describe it a bit more.
+3. To make Wordpress more secure i used **OWASP/ModSecurity**. Let's describe it a bit more.
 
 With the modsecurity-snippet option, its possible to add custom configuration to ModSecurity. The main config file is modsecurity.conf. 
 
@@ -126,3 +126,12 @@ Modify file as required and save the file in a ConfigMap.
 
         kubectl -n ingress-nginx create configmap modsecurityconf --from-file=modsecurity.conf
 
+4. Cloudflare(https://www.cloudflare.com/) with free account. **Not implemented, becouse there is no need to do it for one-time website**
+
+Let's register and **andrukhiv.hopto.org** to Cloudflare.
+
+![Screenshot_31](https://user-images.githubusercontent.com/79985930/219876254-7f748694-056d-44cf-8ebe-5ee494f0ad93.png)
+
+My Dyn DNS do not give opportunity to add other nameservers:
+
+![Screenshot_32](https://user-images.githubusercontent.com/79985930/219876724-66b642bf-cb84-49f6-89ba-98a8bfdc4061.png)
