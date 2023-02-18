@@ -102,7 +102,6 @@ Download it, first:
 Make changes:
 
 ...
-# and data leakage issues.
 
 SecResponseBodyAccess Off
 
@@ -115,17 +114,13 @@ SecRuleRemoveById 203054
 SecRuleRemoveById 930100.
 SecRuleRemoveById 920170
 SecRuleRemoveById 930110
-
-
-#SecRuleRemoveById 941310
-
 #################################################
 .....
 
 **SecRuleEngine** - change to On, not DetectionOnly
 **SecResponseBodyAccess** - do not analyze response body
 
-And list of disabled rules. I tern off them, becouse some modules of Wordpress will not correctly work. 
+And **list of disabled rules**. I tern off them, becouse some modules of Wordpress will not correctly work. 
 
 Modify file as required and save the file in a ConfigMap.
 
