@@ -135,3 +135,17 @@ Let's register and **andrukhiv.hopto.org** to Cloudflare.
 My Dyn DNS do not give opportunity to add other nameservers:
 
 ![Screenshot_32](https://user-images.githubusercontent.com/79985930/219876724-66b642bf-cb84-49f6-89ba-98a8bfdc4061.png)
+
+### CIS-CAT Lite
+
+Resoult:
+
+![Screenshot_33](https://user-images.githubusercontent.com/79985930/219966919-eb3fcf70-f909-47ef-8c74-4dcb44c12f2a.png)
+
+It can be more then 80%, but i didn't config: rsync, nftables, iptables. 
+
+
+So, plain Ubuntu have score 48%. Raport is here - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/raw/main/k8s/raport_begin.html
+
+After configuration, score is 80%. Raport is here - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/raw/main/k8s/raport_end.html
+ 
