@@ -2,7 +2,7 @@
 
 ## Solution
 
-### 1 step
+### 1 step / Define variables /
 
 You have to define LOGIN and PASSWORD to database. If you will start terraform from Linux, type:
 
@@ -10,11 +10,11 @@ You have to define LOGIN and PASSWORD to database. If you will start terraform f
     export TF_VAR_DBpassword=wordpress  # Change "wordpressr" to other password or don't change it 
     
     
-### 2 step
+### 2 step / Install Terraform /
 
 Install Terraform - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
-### 3 step
+### 3 step / Deploy infrastructure /
 
 Download terraform scripts https://github.com/AndrukhivAndriy/DevOps-BaseCamp/tree/main/k8s/terr_final
 
@@ -46,7 +46,7 @@ When the main Instance "Wordpress-instance" will deployed - starts metadata_star
 
 This Bash script consist of several parts and at the end - Kubernetes Cluster will be deployed via Kubespray. This script have comments. Link - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/blob/main/k8s/terr_final/startup.sh
 
-### 4 step
+### 4 step / Config environment /
 
 You must login to Instance "Wordpress-instance" and define secret to autodeploy Wordpress database:
 
@@ -61,7 +61,7 @@ Info from terraform output:
  ![Screenshot_28](https://user-images.githubusercontent.com/79985930/219589449-a2f8a166-d7b0-4c68-860d-be05cedb1d2d.png) 
  
  
-### 5 step 
+### 5 step /Install Wordpress via Ansible/
 
 Go to folder /home/ubuntu and type:
 
