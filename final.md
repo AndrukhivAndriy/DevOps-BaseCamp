@@ -93,7 +93,9 @@ Screenshot of web page
 
 With the modsecurity-snippet option, its possible to add custom configuration to ModSecurity. The main config file is *modsecurity.conf*. 
 
-Download it, first:
+Via Ansible i deploy ConfigMap to Nginx-Ingress and then enable it in helm chart (ingress.yaml). 
+
+To make changes to *modsecurity.conf* download it, first:
 
         kubectl -n ingress-nginx cp <ingress-controller-pod-name>:/etc/nginx/modsecurity/modsecurity.conf ./modsecurity.conf
         
