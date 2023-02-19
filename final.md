@@ -118,6 +118,7 @@ To make changes to *modsecurity.conf* download it, first:
         .....
 
 **SecRuleEngine** - change to On, not DetectionOnly
+
 **SecResponseBodyAccess** - do not analyze response body
 
 And **list of disabled rules**. I turn them off , becouse some modules of Wordpress will not correctly work (from my practical experience). 
@@ -126,7 +127,7 @@ Modify file as required and save the file in a ConfigMap:
 
         kubectl -n ingress-nginx create configmap modsecurityconf --from-file=modsecurity.conf
 
-4. Cloudflare(https://www.cloudflare.com/) with free account. **Not implemented, becouse there is no need to do it for one-time website**
+4. **Cloudflare(https://www.cloudflare.com/) with free account. Not implemented, becouse there is no need to do it for one-time website**
 
 Let's register and **andrukhiv.hopto.org** to Cloudflare.
 
