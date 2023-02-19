@@ -77,9 +77,7 @@ Link to Wordpress helm chart:  https://github.com/AndrukhivAndriy/DevOps-BaseCam
 
 ## Resoults
 
-As the resoult go to the browser and type https://andrukhiv.hopto.org/. GCP Instances will work untill 22.02.2023
-
-Screenshot of deploying Wordpress
+Screenshot of deploying Wordpress - https://andrukhiv.hopto.org/ . 
 
 ![Screenshot_29](https://user-images.githubusercontent.com/79985930/219874196-44f30617-5927-47a5-be00-24e3e644c8bc.png)
 
@@ -91,15 +89,15 @@ Screenshot of web page
 
 1. There are no user's name and passwords in all manifests;
 2. To connect to DB I used Kubernetes Secret ( step 4)
-3. To make Wordpress more secure i used **OWASP/ModSecurity**. Let's describe it a bit more.
+3. To make Wordpress more secure i used **OWASP/ModSecurity**. Let's describe some configuration.
 
-With the modsecurity-snippet option, its possible to add custom configuration to ModSecurity. The main config file is modsecurity.conf. 
+With the modsecurity-snippet option, its possible to add custom configuration to ModSecurity. The main config file is *modsecurity.conf*. 
 
 Download it, first:
 
         kubectl -n ingress-nginx cp <ingress-controller-pod-name>:/etc/nginx/modsecurity/modsecurity.conf ./modsecurity.conf
         
-Make changes:
+**Make changes:**
 
 ...
 
@@ -120,9 +118,9 @@ SecRuleRemoveById 930110
 **SecRuleEngine** - change to On, not DetectionOnly
 **SecResponseBodyAccess** - do not analyze response body
 
-And **list of disabled rules**. I tern off them, becouse some modules of Wordpress will not correctly work. 
+And **list of disabled rules**. I turn them off , becouse some modules of Wordpress will not correctly work (from my practical experience). 
 
-Modify file as required and save the file in a ConfigMap.
+Modify file as required and save the file in a ConfigMap:
 
         kubectl -n ingress-nginx create configmap modsecurityconf --from-file=modsecurity.conf
 
