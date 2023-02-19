@@ -103,19 +103,19 @@ To make changes to *modsecurity.conf* download it, first:
 
 ...
 
-SecResponseBodyAccess Off
+        SecResponseBodyAccess Off
 
-SecRuleEngine On
+        SecRuleEngine On
 
-############ DISABLED RULES  #####################
-SecRuleRemoveById 942100
-SecRuleRemoveById 932105
-SecRuleRemoveById 203054
-SecRuleRemoveById 930100.
-SecRuleRemoveById 920170
-SecRuleRemoveById 930110
-#################################################
-.....
+        ############ DISABLED RULES  #####################
+        SecRuleRemoveById 942100
+        SecRuleRemoveById 932105
+        SecRuleRemoveById 203054
+        SecRuleRemoveById 930100.
+        SecRuleRemoveById 920170
+        SecRuleRemoveById 930110
+        #################################################
+        .....
 
 **SecRuleEngine** - change to On, not DetectionOnly
 **SecResponseBodyAccess** - do not analyze response body
