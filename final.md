@@ -77,7 +77,7 @@ Link to Wordpress helm chart:  https://github.com/AndrukhivAndriy/DevOps-BaseCam
 
 ## Resoults
 
-Screenshot of deploying Wordpress - https://andrukhiv.hopto.org/ . 
+Screenshot of deploying Wordpress. 
 
 ![Screenshot_29](https://user-images.githubusercontent.com/79985930/219874196-44f30617-5927-47a5-be00-24e3e644c8bc.png)
 
