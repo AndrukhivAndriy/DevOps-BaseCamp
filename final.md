@@ -85,6 +85,8 @@ Screenshot of web page
 
 ![Screenshot_30](https://user-images.githubusercontent.com/79985930/219874353-8733fdb3-affd-45d9-9e28-a5bfad2c75f0.png)
 
+**Repository with a list of commands to deploy Wordpress is by the link (without description)** - https://github.com/AndrukhivAndriy/GLfinaltask
+
 ## Hardening
 
 1. There are no user's name and passwords in all manifests;
