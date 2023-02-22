@@ -152,3 +152,28 @@ So, plain Ubuntu have score 48%. Raport is here - https://github.com/AndrukhivAn
 
 After configuration, score is 80%. Raport is here - https://github.com/AndrukhivAndriy/DevOps-BaseCamp/raw/main/k8s/raport_end.html
  
+# Monitoring deloyed Wordpress
+
+This will add the Prometheus repository and update all of your repositories: 
+
+        helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+        helm repo update
+        
+If you need to modify some settings retrieve these values in a file:
+
+        helm inspect values prometheus-community/kube-prometheus-stack > /tmp/kube-prometheus-stack.values
+        
+In my case, i changed *LoadBalancer=LOCALIP*. install Prometheus and Grafana:
+
+        helm install prometheus-community/kube-prometheus-stack \
+        --create-namespace --namespace prometheus \
+        --generate-name \
+        --values /tmp/kube-prometheus-stack.values \
+        --set prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues=false \
+        --set grafana.service.type=LoadBalancer
+
+Let's open Grafana with login *Admin* and password wich you can find in */tmp/kube-prometheus-stack.values*:
+
+Define dashboard General/Kubernetes/Compute Resources/Cluster:
+
+![Screenshot_34](https://user-images.githubusercontent.com/79985930/220729284-c915b17a-0d14-4430-80fc-5c8fbcd2721f.png)
